@@ -1,0 +1,21 @@
+@inherits Custom.Hybrid.RazorTyped
+@* FYI: this inherits from RazorTyped to use the latest APIs. Learn more on https://go.2sxc.org/cs-typed *@
+@using ToSic.Sxc.PersonaBar.Utils;
+@using DotNetNuke.Abstractions;
+
+@{
+  GetService<PersonaBarManager>().Hide();
+}
+
+<div @Kit.Toolbar.Default(MyItem)>
+
+  <h1>Hide PersonaBar</h1>
+
+  <div class="alert alert-secondary">
+    PersonaBar will be hidden.
+  </div>
+
+  <a class="btn btn-primary" href="?back=true">BACK</a>
+
+  <hr>
+</div>

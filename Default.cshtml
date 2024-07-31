@@ -1,0 +1,24 @@
+@inherits Custom.Hybrid.RazorTyped
+@* FYI: this inherits from RazorTyped to use the latest APIs. Learn more on https://go.2sxc.org/cs-typed *@
+@using ToSic.Sxc.PersonaBar.Utils;
+@using DotNetNuke.Abstractions;
+
+@{
+  var PersonaBarManager = GetService<PersonaBarManager>();
+  // var personaBarManager = new PersonaBarManager(navigationManager).Init();
+}
+
+<div @Kit.Toolbar.Default(MyItem)>
+
+  <h1>PersonaBar manager</h1>
+
+  <div class="alert alert-secondary">
+    Click on button to change PersonaBar visibility.
+  </div>
+
+  <a class="btn btn-primary" href="?Hide=true">HIDE</a>
+
+  <a class="btn btn-primary" href="?Show=true">SHOW</a>
+
+  <hr>
+</div>
